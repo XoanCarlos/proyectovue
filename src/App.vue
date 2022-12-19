@@ -23,6 +23,7 @@ import TablaClientes from "@/components/TablaClientes.vue";
   }
 </script>
 
+
 <style>
 button{
   background: #008953;
