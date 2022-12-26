@@ -1,3 +1,38 @@
+<script>
+import TablaClientes from "@/components/TablaClientes.vue"
+export default {
+  name: 'app',
+  components:{
+    TablaClientes,
+  },
+
+  data: function(){
+    return{
+      clientes: [
+        {
+          id: 1,
+          nombre: 'Lou',
+          apellido: 'Reed',
+          email: 'lreed@email.com',
+        },
+        {
+          id: 2,
+          nombre: 'Patti',
+          apellido: 'Smith',
+          email: 'psmith@email.com',
+        },
+        {
+          id: 3,
+          nombre: 'Janis',
+          apellido: 'Joplin',
+          email: 'jjoplin@email.com',
+        },
+      ],
+    }
+  },
+}
+</script>
+
 <template>
   <div id="app" class="container">
     <div class="row">
@@ -13,39 +48,4 @@
     </div>
   </div>
 </template>
-
-<script>
-import TablaClientes from "@/components/TablaClientes.vue"
-  export default {
-    name: 'app',
-    components:{
-      TablaClientes,
-    },
-
-    data() {
-      return{
-        clientes: [
-          {
-            id: 1,
-            nombre: 'Lou',
-            apellido: 'Reed',
-            email: 'lreed@email.com',
-          },
-          {
-            id: 2,
-            nombre: 'Patti',
-            apellido: 'Smith',
-            email: 'psmith@email.com',
-          },
-          {
-            id: 3,
-            nombre: 'Janis',
-            apellido: 'Joplin',
-            email: 'jjoplin@email.com',
-          },
-        ],
-      }
-    },
-  }
-</script>
 

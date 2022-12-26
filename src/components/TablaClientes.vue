@@ -1,3 +1,12 @@
+<script>
+export default {
+  name: 'tabla-clientes',
+  props: {
+    clientes: Array,
+  },
+}
+</script>
+
 <template>
   <div id ='tabla-clientes'>
     <table class='table'>
@@ -9,7 +18,7 @@
       </tr>
       </thead>
       <tbody>
-       <tr v-for="cliente in clientes" :key="cliente.id">
+       <tr v-for="cliente in clientes" :key="cliente.id" >
           <td>{{ cliente.nombre }}</td>
           <td>{{ cliente.apellido }}</td>
           <td>{{ cliente.email}}</td>
@@ -19,13 +28,5 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'tabla-clientes',
-  props: {
-    clientes: Array,
-    },
-  }
 
-</script>
 
