@@ -1,6 +1,6 @@
 <template>
   <div id ='tabla-clientes'>
-    <table class = 'table'>
+    <table class='table'>
       <thead>
       <tr>
         <th>NOMBRE</th>
@@ -9,21 +9,11 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>Lou</td>
-        <td>Reed</td>
-        <td>lreed@email.com</td>
-      </tr>
-      <tr>
-        <td>Patti</td>
-        <td>Smith</td>
-        <td>psmith@email.com</td>
-      </tr>
-      <tr>
-        <td>Janis</td>
-        <td>Joplin</td>
-        <td>jjoplin@email.com</td>
-      </tr>
+       <tr v-for="cliente in clientes" :key="cliente.id">
+          <td>{{ cliente.nombre }}</td>
+          <td>{{ cliente.apellido }}</td>
+          <td>{{ cliente.email}}</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -31,10 +21,11 @@
 
 <script>
 export default {
-  name: "tabla-clientes",
-}
+  name: 'tabla-clientes',
+  props: {
+    clientes: Array,
+    },
+  }
+
 </script>
 
-<style scoped>
-
-</style>
