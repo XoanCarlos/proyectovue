@@ -7,26 +7,45 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <TablaClientes />
+        <tabla-clientes :clientes="clientes" />
+        <!-- <tabla-clientes v-bind:clientes="clientes" /> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import TablaClientes from "@/components/TablaClientes.vue";
+import TablaClientes from "@/components/TablaClientes.vue"
   export default {
     name: 'app',
     components:{
       TablaClientes,
     },
+
+    data() {
+      return{
+        clientes: [
+          {
+            id: 1,
+            nombre: 'Lou',
+            apellido: 'Reed',
+            email: 'lreed@email.com',
+          },
+          {
+            id: 2,
+            nombre: 'Patti',
+            apellido: 'Smith',
+            email: 'psmith@email.com',
+          },
+          {
+            id: 3,
+            nombre: 'Janis',
+            apellido: 'Joplin',
+            email: 'jjoplin@email.com',
+          },
+        ],
+      }
+    },
   }
 </script>
 
-
-<style>
-button{
-  background: #008953;
-  border: 1px solid #008953;
-}
-</style>
